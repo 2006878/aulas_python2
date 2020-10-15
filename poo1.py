@@ -20,6 +20,10 @@ class Point:
     def __repr__(self):
         return '(' + str(self.x) + ',' + str(self.y) + ')' 
 
+    def getx(self):
+        'retorna coordenada x'
+        return self.coordx    
+
 #x+y==>(2,3)+(2,2)=>(4,5)
 #x+8==>(2,3)+8=>(10,11)
     def __add__(self, other):
@@ -39,3 +43,4 @@ p = Point(1,2)
 q = Point(3,4)
 print(p+q)
 print(p+2)
+print(p.getx)
