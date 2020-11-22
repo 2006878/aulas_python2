@@ -1,6 +1,8 @@
-from tkinter import Tk, Label, PhotoImage
+from tkinter import Tk, Label, PhotoImage, TOP, BOTTOM
 root = Tk()
-photo = PhotoImage(file='computer.gif')
-hello = Label(master=root, image=photo, width=300, height=180)
-hello.pack()
+photo = PhotoImage(file='computer.gif'). subsample(2)
+image = Label(master=root, image=photo)
+image.pack(side = TOP)
+text = Label(master=root, font=("courier", 18), text = ' Olá alunos da Univesp')
+text.pack(side = BOTTOM)
 root.mainloop()
